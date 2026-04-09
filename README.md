@@ -1,3 +1,10 @@
+## 👥 Who Is This For?
+- 🎓 Econ/game theory researchers exploring dynamic equilibrium extensions
+- 🏦 Policy modelers stress-testing capital circulation scenarios
+- 💻 Devs building simulation tools (Python/R/Julia implementations welcome!)
+- 🔍 Curious minds who like big-idea math with real-world hooks
+
+
 # License
 
 © 2026 AnomanderRake01
