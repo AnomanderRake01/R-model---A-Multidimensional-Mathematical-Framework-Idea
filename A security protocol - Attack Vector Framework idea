@@ -10,6 +10,9 @@ The RSA key is so long itself, it could probably fill up a page in a word docume
 This is a new example of a computer security verification system.
 What I have implemented is a recursive multi layer loop with a third check.
 The system uses my “R model” as a baseline, long and short model.
+The system operates across three layers. Layer 1 is a fast passive verification check running continuously. 
+Layer 2 is a deep computational trap that activates on detected intrusion. 
+Layer 3 is a hardware binding check that detects environmental tampering. Each layer is independently verifiable and collectively they form a continuously self-checking architecture that requires no trusted third party
 
 **R = (Nk) = (R)**
 
@@ -25,7 +28,7 @@ The closed state converges toward 1/2 from below but never arrives:
 
 - lim(k → ∞) Vk = 1/2  (limit exists but is never reached)
 
-- Produces permanent verification tension: εk = 1/2 − Vk > 0, where εk → 0 but εk > 0 always
+- Produces permanent verification tension: εk = 1/2 − Vk > 0, where εk → 0 but εk > 0 alwaysThe system operates across three layers. Layer 1 is a fast passive verification check running continuously. 
 
 ## **2.2 The Open State (Ok)**
 
@@ -53,7 +56,8 @@ It’s a check that mirrors it:
 For instance:
 1x0K, 2x0K, 3X0K, 4X0K - A(K), B(K), C(K), D(K)
 
-You can make the number strings and letter strings as long as you want, so it moots the arguments of too few numbers to hold all the computer systems in the world currently existing.
+You can make the number strings and letter strings as long as you want, so it moots thLayer 2 is a deep computational trap that activates on detected intrusion. Layer 3 is a hardware binding check that detects environmental tampering. Each layer is independently verifiable and collectively they form a continuously self-checking architecture that requires no trusted third party
+e arguments of too few numbers to hold all the computer systems in the world currently existing.
 The system is something that would satisfy both code minimalists and maximalists.
 The passive verification layer is deployable in any context. The active countermeasure layer is designed for authorized high-security infrastructure deployment only.
 
