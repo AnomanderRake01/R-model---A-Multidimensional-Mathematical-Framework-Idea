@@ -1,8 +1,8 @@
 Attack/Vector model- a new next generation verification model for computer security (whitepaper)
 
 Why do we need a new verification model?
-In my mind, the current way 256 bit keys and RSA works is really messy.
-What you are given is essentially a long line of code that when found, can be hacked, and it’s a very messy system.
+In my mind, the current way 256 bit keys and RSA works is trust-dependent architecture with a single point of failure at the key holder
+What you are given is essentially a long line of code that when found, can be hacked, and it’s not good since you rely on both parties to be good agents, not bad.
 The RSA key is so long itself, it could probably fill up a page in a word document on it’s own, and it’s not very good because it relies on user trust and not self verification that can’t be tampered with.
 
 
@@ -37,7 +37,6 @@ The open state diverges upward, approaching 2 from below:
 
 - lim(k → ∞) Ok = 2  (limit exists but is never reached)
 
-- NOTE: DeepSeek altered this definition in its analysis — the correct asymptote is 2, not 1/2
 
 ## **2.3 The Tension Condition**
 
@@ -56,10 +55,11 @@ For instance:
 
 You can make the number strings and letter strings as long as you want, so it moots the arguments of too few numbers to hold all the computer systems in the world currently existing.
 The system is something that would satisfy both code minimalists and maximalists.
+The passive verification layer is deployable in any context. The active countermeasure layer is designed for authorized high-security infrastructure deployment only.
 
 
 What will happen when an attacker tries to run this:
-The long model will boot, if attempted to be hacked, even through any of the layer checks, because it will know something is off.
+The long model will boot, if attempted to be hacked, even through any of the layer checks, the verification tension condition detects structural inconsistency and escalates to the active layer.
 What will then happen is that the hacker that decompiles it will basically see that and it will trigger a long line of numbers. It’ll cause a buffer overflow event, because the number string is too long for the computer or RAM to handle, and basically “shut” the hacker out of its own system.
 You can implement this into military and other infrastructure where uptime is key, and you need a defense mechanism against attacks like zero days where you traditionally also run on older OS systems.
 
