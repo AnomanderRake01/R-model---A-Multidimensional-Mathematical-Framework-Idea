@@ -189,7 +189,7 @@ print(f"Layer 3 Hardware Hex Anchor: {l3_anchor[:16]}...[LOCKED]")
 
 The following implementation was independently derived by xranukalpjha (Discord) during external stress testing of the architecture. The mutual verification structure was arrived at without access to the design conversation behind the model, and confirms the architecture produces consistent implementations under independent scrutiny
 
-Code for blockchain/safety net like verification snipped guard (contributed by xranukalpjha on discord) 
+Code for blockchain/safety net like verification snipped guard
 def safe_mode_verification(local_state, remote_state):
 
  # Both parties verify each other
