@@ -103,6 +103,12 @@ Appendix:
 To fix so that k never loops and causes a CPU overflow to 100%, here's a quick solution, or two of them, to make sure you "break" the models, here's a clean explanation of how to fix the issue:
 Let k ∈ [0, k_max]  where k_max is deployment-configurable (time, event count, or resource threshold)
 
+# ─────────────────────────────────────────────
+# Illustrative Pseudocode Only
+# Production requires: TPM/TEE attestation, 
+# memory-safe CSPRNG, and constant-time primitives.
+# ─────────────────────────────────────────────
+
 IF (k == k_max) 
    OR (CPU_Usage ≥ θ_cpu) 
    OR (Latency_Delta ≥ θ_time) 
