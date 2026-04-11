@@ -2,8 +2,18 @@ Attack/Vector model- a new next generation verification model for computer secur
 
 Why do we need a new verification model?
 In my mind, the current way 256 bit keys and RSA works is trust-dependent architecture with a single point of failure at the key holder
-What you are given is essentially a long line of code that when found, can be hacked, and it’s not good since you rely on both parties to be good agents, not bad.
-The RSA key is so long itself, it could probably fill up a page in a word document on it’s own, and it’s not very good because it relies on user trust and not self verification that can’t be tampered with.
+Current criticism and issues with RSA:
+RSA is implemented to trust that key holders are in a chain of trust.
+Static verification model. It’s a signature that is checked only once at connection time, never during the run process.
+No hardware binding. When you steal an RSA key it can be used on any system, anywhere.
+Key management: An admin has to oversee rotation of keys, expiry date etc.
+
+What my model does:
+
+ ● Eliminating trust chain (no CAs required) 
+ ● Continuous verification (εk > 0 check runs constantly)
+ ● Hardware binding (Layer 3 ties verification to physical system)
+ ● Self-maintaining (mathematical invariant requires no rotation)"
 
 
 
@@ -11,8 +21,9 @@ This is a new example of a computer security verification system.
 What I have implemented is a recursive multi layer loop with a third check.
 The system uses my “R model” as a baseline, long and short model.
 The system operates across three layers. Layer 1 is a fast passive verification check running continuously. 
-Layer 2 is a deep computational trap that activates on detected intrusion. 
+Layer 2 is a container with a modern SE Linux kernel, read only computational solution with the long model that will generate a hashsum. It has a hidden /tmp file set as a ramdisk with a secondary hashsum. From the long model it will generate a 10-30 long combination of numbers, and layer 1 and 3 only trusts layer 2 for verification.
 Layer 3 is a hardware binding check that detects environmental tampering. Each layer is independently verifiable and collectively they form a continuously self-checking architecture that requires no trusted third party
+Model, general explanation:
 
 **R = (Nk) = (R)**
 
@@ -28,7 +39,7 @@ The closed state converges toward 1/2 from below but never arrives:
 
 - lim(k → ∞) Vk = 1/2  (limit exists but is never reached)
 
-- Produces permanent verification tension: εk = 1/2 − Vk > 0, where εk → 0 but εk > 0 alwaysThe system operates across three layers. Layer 1 is a fast passive verification check running continuously. 
+- Produces permanent verification tension: εk = 1/2 − Vk > 0, where εk → 0 but εk > 0 always
 
 ## **2.2 The Open State (Ok)**
 
@@ -50,23 +61,18 @@ The open state diverges upward, approaching 2 from below:
 Tension never reaches zero. The system is permanently in a state of self-verification without resolution.”
 
 
-This is the formalized documentation. The short model and long model will be added as a “code” that can be written in any program, on top of this, with a layer 3 hexadecimal check. It can be run in both root and as a registry key/system file, or even a bios hardware level check.
+This is the formalized documentation. The short model and long model will be added as a “code” that can be written in any language, on top of this, with a layer 3 hexadecimal check. It can be run in both root and as a registry key/system file, or even a bios hardware level check.
 
 It’s a check that mirrors it:
 For instance:
 1x0K, 2x0K, 3X0K, 4X0K - A(K), B(K), C(K), D(K)
 
-You can make the number strings and letter strings as long as you want, so it moots thLayer 2 is a deep computational trap that activates on detected intrusion. Layer 3 is a hardware binding check that detects environmental tampering. Each layer is independently verifiable and collectively they form a continuously self-checking architecture that requires no trusted third party
+You can make the number strings and letter strings as long as you want, so it moots the argument of too few numbers. Layer 2 is a container with a modern linux kernel that runs SELinux privileges. It’s read only, and has 2 important parts: a main file and a hidden /tmp. The hidden tmp is a ramdisk file that generates a secret hash, so hash 1 isn’t compromised. Layer 3 is a hardware binding check that detects environmental tampering. Each layer is independently verifiable and collectively they form a continuously self-checking architecture that requires no trusted third party
 e arguments of too few numbers to hold all the computer systems in the world currently existing.
 The system is something that would satisfy both code minimalists and maximalists.
-The passive verification layer is deployable in any context. The active countermeasure layer is designed for authorized high-security infrastructure deployment only.
 
+The solution is a hybrid that can be implemented from everything to encryption alongside RSA/256 bit keys, that “assumes” the owner’s trust, but here requires verification handshakes on both ends and is a small snippet of code to run.
 
-What will happen when an attacker tries to run this:
-The long model will boot, if attempted to be hacked, even through any of the layer checks, the verification tension condition detects structural inconsistency and escalates to the active layer.
-What will then happen is that the hacker that decompiles it will basically see that and it will trigger a long line of numbers. It’ll cause a buffer overflow event, because the number string is too long for the computer or RAM to handle, and basically “shut” the hacker out of its own system.
-You can implement this into military and other infrastructure where uptime is key, and you need a defense mechanism against attacks like zero days where you traditionally also run on older OS systems.
-
-To make a safe check:
-Implement a blockchain/safety net version where you add a “true” check to all three, basically a security handshake that can be implemented from everything to encryption alongside RSA/256 bit keys, that “assumes” the owner’s trust, but here requires verification handshakes on both ends and is a small snippet of code to run.
-This does not interfere legally on consumer computers either.
+To end user who reads this document:
+If you're mathematically or cryptographically literate: where does this model break? What assumptions need formalizing? I'm seeking rigorous critique, not validation
+Make sure to comment if you do have any genuine questions.
