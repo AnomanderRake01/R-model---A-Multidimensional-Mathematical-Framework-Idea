@@ -159,7 +159,6 @@ def get_layer3_hardware_anchor():
     return hashlib.sha256(hw_data.encode()).hexdigest()
 
 def generate_epoch_seed(previous_tension, hardware_anchor):
-    # HMAC implementation of the Qwen Step 1 & 2
     # This 'seals' the tension into the hardware identity
     combined = f"{previous_tension}{hardware_anchor}{os.urandom(16)}"
     return hashlib.sha256(combined.encode()).hexdigest()
