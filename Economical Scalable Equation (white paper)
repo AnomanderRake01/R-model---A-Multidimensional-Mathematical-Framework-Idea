@@ -2,7 +2,8 @@ Scalable Nash Equilibrium (SNE): A Recursive Framework for Macro-Systemic Stabil
 
 
 
-Abstract Traditional Nash Equilibrium (Nash, 1950) provides a solution concept for strategic stability in non-cooperative settings but remains functionally static, often failing to account for systemic throughput, capital velocity, and the bifurcation points inherent in high-leverage macroeconomic environments. 
+Abstract 
+Traditional Nash Equilibrium (Nash, 1950) provides a solution concept for strategic stability in non-cooperative settings but remains functionally static, often failing to account for systemic throughput, capital velocity, and the bifurcation points inherent in high-leverage macroeconomic environments. 
 This paper derives a Scalable Nash Equilibrium (SNE) that extends micro-strategic logic into a kinetic macro-systemic framework. By introducing a recursive stress-testing engine—3n + k(x,y,z,R)—we identify the "Event Horizon" of systemic stability, where debt density and asset valuation deltas force a state-space collapse.
 1. The Theoretical Shift: From Static to Kinetic
 The limitation of classical game theory in macroeconomic modeling is the assumption of isolated players and fixed payoff matrices. In the SNE framework, we redefine the players as aggregate strategic sectors: Concentrated Capital (A), Reallocative Policy (a), and Public Capacity (c).The equilibrium is no longer a terminal point of non-change; it is a Balanced State of Flow, where the kinetic energy of utility maximization is converted into systemic infrastructure without breaching the boundaries of structural integrity.
