@@ -1,4 +1,4 @@
-Attack/Vector model- a new next generation verification model for computer security (whitepaper)
+3 layer security verification protocol- a new next generation verification model for computer security (whitepaper)
 
 Why do we need a new verification model?
 In my mind, the current way 256 bit keys and RSA works is trust-dependent architecture with a single point of failure at the key holder
