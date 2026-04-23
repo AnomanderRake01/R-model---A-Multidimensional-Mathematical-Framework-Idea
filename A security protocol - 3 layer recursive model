@@ -202,6 +202,4 @@ else PASS
  return REJECT # Deny connection (no crash)
 
 
-To end user who reads this document:
-If you're mathematically or cryptographically literate: where does this model break? What assumptions need formalizing? I'm seeking rigorous critique, not validation
-Make sure to comment if you do have any genuine questions.
+
