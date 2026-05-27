@@ -243,27 +243,13 @@ Status: relationship established, formal proof claim not made. Requires independ
 7. Numerical Analysis Capability — Validated
 Added v1.4. Summary of empirical validation results from six levels of stress testing.
 The Ru model has been validated as a numerical analysis tool across four independent mathematical domains (Patterns on Elliptic Curves, Modal Group Theory, Commutative Decomposition of Infinite Symmetric Groups, Boundary Dynamics in Weakly Hyperbolic Groups) at six levels of stress testing including asymmetric operator injection, Riccati/Möbius randomization, and SVD eigenmode decomposition.
-Capability
-Result
-Evidence
-Phase transition detection
-Confirmed
-System 3a→3b D(S) jump: 3.0 vs ∞; System 4 κ-threshold isolation
-Attractor collapse identification
-Confirmed
-System 4 rigid collapse correctly isolated; black hole analog confirmed
-Structural distinction preservation
-Confirmed
-M(S) = 0 vs M(S) = 1 cleanly separates monoids from inverse monoids
-Hidden clustering
-Confirmed (v1.4)
-Hyperbolic/Elliptic equivalence class discovered; Sym(ℕ)/Modal family identified
-Recursive stability classification
-Confirmed
-ε decay monotone and non-zero across all 21 trajectory steps
-Meaningful dynamics compression
-Confirmed
-99.54% variance in single eigenmode; four domains in 2D curvature space
+Capability                          Result           Evidence
+Phase transition detection          Confirmed        System 3a→3b D(S) jump: 3.0 vs ∞; System 4 κ-threshold isolation
+Attractor collapse identification   Confirmed        System 4 rigid collapse correctly isolated; black hole analog confirmed
+Structural distinction preservation Confirmed        M(S) = 0 vs M(S) = 1 cleanly separates monoids from inverse monoids
+Hidden clustering                   Confirmed (v1.4) Hyperbolic/Elliptic equivalence class discovered; Sym(ℕ)/Modal family identified
+Recursive stability classification  Confirmed        ε decay monotone and non-zero across all 21 trajectory steps
+Meaningful dynamics compression     Confirmed        99.54% variance in single eigenmode; four domains in 2D curvature space
 
 
 8. Open Questions
